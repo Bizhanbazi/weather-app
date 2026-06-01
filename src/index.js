@@ -46,13 +46,10 @@ form.addEventListener("submit", (e) => {
 });
 
 unitBtn.addEventListener("click", () => {
-  if (currentUnit === "metric") {
-    currentUnit = "us";
-  } else {
-    currentUnit = "metric";
-  }
+  currentUnit = currentUnit === "metric" ? "us" : "metric";
 
   loadWeather(currentCity);
 });
 
 loadWeather(currentCity);
+console.log("APP STARTED");
